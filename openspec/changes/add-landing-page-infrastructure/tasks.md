@@ -30,19 +30,19 @@
 - [x] 3.8 Test navigation across all pages
 
 ## 4. Home Page (Landing Core)
-- [ ] 4.1 Create home page route (app/page.tsx)
-- [ ] 4.2 Build Hero section with treasurer-focused messaging ("Financial management built for team treasurers")
-- [ ] 4.3 Add financial dashboard screenshot to hero (payment tracking or reports visual)
-- [ ] 4.4 Create Features section with 4 financial feature cards (Payment Tracking, Expense Management, Financial Reports, Automated Reminders)
-- [ ] 4.5 Build Competitive Differentiation section ("Why Team Manager vs. TeamSnap?")
-- [ ] 4.6 Create comparison table highlighting financial depth advantages
-- [ ] 4.7 Build Social Proof section with treasurer-specific testimonials (3-5 quotes)
-- [ ] 4.8 Add usage statistics (e.g., "Tracking $2.5M+ in team finances", "500+ teams")
-- [ ] 4.9 Create Pricing Preview section linking to full pricing
-- [ ] 4.10 Add final CTA section with treasurer-focused messaging
-- [ ] 4.11 Implement responsive layouts for all sections
-- [ ] 4.12 Add SEO meta tags and structured data with treasurer keywords
-- [ ] 4.13 Test static generation and performance
+- [x] 4.1 Create home page route (app/page.tsx)
+- [x] 4.2 Build Hero section with treasurer-focused messaging ("Financial management built for team treasurers")
+- [x] 4.3 Add financial dashboard screenshot to hero (payment tracking or reports visual)
+- [x] 4.4 Create Features section with 4 financial feature cards (Payment Tracking, Expense Management, Financial Reports, Automated Reminders)
+- [x] 4.5 Build Competitive Differentiation section ("Why Team Manager vs. TeamSnap?")
+- [x] 4.6 Create comparison table highlighting financial depth advantages
+- [x] 4.7 Build Social Proof section with treasurer-specific testimonials (3-5 quotes)
+- [x] 4.8 Add usage statistics (e.g., "Tracking $2.5M+ in team finances", "500+ teams")
+- [x] 4.9 Create Pricing Preview section linking to full pricing
+- [x] 4.10 Add final CTA section with treasurer-focused messaging
+- [x] 4.11 Implement responsive layouts for all sections
+- [x] 4.12 Add SEO meta tags and structured data with treasurer keywords
+- [x] 4.13 Test static generation and performance
 
 ## 5. Product Pages
 - [ ] 5.1 Create product page route (app/products/[slug]/page.tsx)

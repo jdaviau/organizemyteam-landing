@@ -117,14 +117,13 @@ export function Header() {
 
               {/* Pricing Link */}
               <NavigationMenuItem>
-                <Link href="/pricing" legacyBehavior passHref>
-                  <NavigationMenuLink
-                    className={navigationMenuTriggerStyle()}
-                    data-active={pathname === "/pricing"}
-                  >
-                    Pricing
-                  </NavigationMenuLink>
-                </Link>
+                <NavigationMenuLink
+                  asChild
+                  className={navigationMenuTriggerStyle()}
+                  data-active={pathname === "/pricing"}
+                >
+                  <Link href="/pricing">Pricing</Link>
+                </NavigationMenuLink>
               </NavigationMenuItem>
 
               {/* Resources Dropdown */}
