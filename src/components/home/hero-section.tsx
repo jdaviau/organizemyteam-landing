@@ -1,9 +1,6 @@
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-
-const APP_URL =
-  process.env.NEXT_PUBLIC_APP_URL || "https://app.organizemyteam.com";
+import { ctaLinks } from "@/lib/constants";
 
 export function HeroSection() {
   return (
@@ -31,7 +28,7 @@ export function HeroSection() {
         {/* CTA Buttons */}
         <div className="mt-10 flex flex-col gap-4 sm:flex-row">
           <Button size="lg" asChild>
-            <a href={`${APP_URL}/signup`}>Start Free Trial</a>
+            <a href={ctaLinks.signup}>Start Free Trial</a>
           </Button>
           <Button size="lg" variant="outline" asChild>
             <a href="#features">See How It Works</a>

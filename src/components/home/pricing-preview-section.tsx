@@ -10,9 +10,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { CheckIcon } from "lucide-react";
-
-const APP_URL =
-  process.env.NEXT_PUBLIC_APP_URL || "https://app.organizemyteam.com";
+import { ctaLinks } from "@/lib/constants";
 
 const tiers = [
   {
@@ -28,7 +26,7 @@ const tiers = [
       "Email support",
     ],
     cta: "Start Free",
-    href: `${APP_URL}/signup`,
+    href: ctaLinks.signup,
     highlighted: false,
   },
   {
@@ -46,7 +44,7 @@ const tiers = [
       "Priority support",
     ],
     cta: "Start Free Trial",
-    href: `${APP_URL}/signup?plan=pro`,
+    href: `${ctaLinks.signup}?plan=pro`,
     highlighted: true,
     badge: "Most Popular",
   },

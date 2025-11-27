@@ -8,6 +8,7 @@ import { Separator } from "@/components/ui/separator";
 import { mdxComponents } from "@/components/blog";
 import { getPostBySlug, getAllSlugs, getAllPosts } from "@/lib/blog";
 import { CalendarIcon, ClockIcon, ArrowLeftIcon, UserIcon } from "lucide-react";
+import { ctaLinks } from "@/lib/constants";
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>;
@@ -209,7 +210,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             Try Team Manager free for 14 days. No credit card required.
           </p>
           <Button variant="secondary" size="lg" className="mt-6" asChild>
-            <a href="https://app.organizemyteam.com/signup">Start Free Trial</a>
+            <a href={ctaLinks.signup}>Start Free Trial</a>
           </Button>
         </div>
       </article>

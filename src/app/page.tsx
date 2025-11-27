@@ -7,6 +7,7 @@ import {
   StatsSection,
   PricingPreviewSection,
   CTASection,
+  BeforeAfterSection,
 } from "@/components/home";
 
 export const metadata: Metadata = {
@@ -102,6 +103,7 @@ export default function HomePage() {
       <HeroSection />
       <StatsSection />
       <FeaturesSection />
+      <BeforeAfterSection />
       <ComparisonSection />
       <TestimonialsSection />
       <PricingPreviewSection />

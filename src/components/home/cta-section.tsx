@@ -1,7 +1,5 @@
 import { Button } from "@/components/ui/button";
-
-const APP_URL =
-  process.env.NEXT_PUBLIC_APP_URL || "https://app.organizemyteam.com";
+import { ctaLinks } from "@/lib/constants";
 
 export function CTASection() {
   return (
@@ -21,7 +19,7 @@ export function CTASection() {
               variant="secondary"
               asChild
             >
-              <a href={`${APP_URL}/signup`}>Start Free Trial</a>
+              <a href={ctaLinks.signup}>Start Free Trial</a>
             </Button>
             <Button
               size="lg"

@@ -20,8 +20,14 @@ const nextConfig: NextConfig = {
     // Image sizes for srcset
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
-  // Enable static export for landing page (optimal for Vercel)
+  // Enable standalone output for optimal Vercel deployment
   output: "standalone",
+  // Enable compression
+  compress: true,
+  // Power optimizations
+  poweredByHeader: false,
+  // React strict mode for better development experience
+  reactStrictMode: true,
 };
 
 export default nextConfig;

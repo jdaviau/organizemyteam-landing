@@ -11,9 +11,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { CheckIcon, XIcon } from "lucide-react";
-
-const APP_URL =
-  process.env.NEXT_PUBLIC_APP_URL || "https://app.organizemyteam.com";
+import { ctaLinks } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Pricing",
@@ -63,7 +61,7 @@ const tiers = [
       { text: "Automated reminders", included: false },
     ],
     cta: "Get Started Free",
-    href: `${APP_URL}/signup`,
+    href: ctaLinks.signup,
     highlighted: false,
   },
   {
@@ -85,7 +83,7 @@ const tiers = [
       { text: "Priority support", included: true },
     ],
     cta: "Start 14-Day Free Trial",
-    href: `${APP_URL}/signup?plan=pro`,
+    href: `${ctaLinks.signup}?plan=pro`,
     highlighted: true,
     badge: "Best Value",
   },
@@ -381,7 +379,7 @@ export default function PricingPage() {
 
         <div className="mt-8 text-center">
           <Button size="lg" asChild>
-            <a href={`${APP_URL}/signup`}>Try Free for 14 Days</a>
+            <a href={ctaLinks.signup}>Try Free for 14 Days</a>
           </Button>
         </div>
       </section>
@@ -422,7 +420,7 @@ export default function PricingPage() {
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <Button size="lg" variant="secondary" asChild>
-                <a href={`${APP_URL}/signup`}>Start Free Trial</a>
+                <a href={ctaLinks.signup}>Start Free Trial</a>
               </Button>
               <Button
                 size="lg"

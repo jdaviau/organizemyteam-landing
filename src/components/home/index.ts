@@ -5,3 +5,4 @@ export { TestimonialsSection } from "./testimonials-section";
 export { StatsSection } from "./stats-section";
 export { PricingPreviewSection } from "./pricing-preview-section";
 export { CTASection } from "./cta-section";
+export { BeforeAfterSection } from "./before-after-section";

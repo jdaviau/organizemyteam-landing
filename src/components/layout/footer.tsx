@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
+import { ctaLinks } from "@/lib/constants";
 
 const footerLinks = {
   product: {
@@ -33,8 +34,6 @@ const footerLinks = {
     ],
   },
 };
-
-const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.organizemyteam.com";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -88,13 +87,13 @@ export function Footer() {
           </p>
           <div className="flex items-center gap-4">
             <a
-              href={`${APP_URL}/login`}
+              href={ctaLinks.login}
               className="text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
               Log in
             </a>
             <a
-              href={`${APP_URL}/signup`}
+              href={ctaLinks.signup}
               className="text-sm font-medium text-primary transition-colors hover:text-primary/80"
             >
               Get Started Free

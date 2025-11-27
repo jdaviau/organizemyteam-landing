@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { MenuIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
+import { ctaLinks } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -69,8 +70,6 @@ const resourceLinks = [
     description: "Get in touch with our team",
   },
 ];
-
-const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.organizemyteam.com";
 
 export function Header() {
   const pathname = usePathname();
@@ -151,10 +150,10 @@ export function Header() {
         {/* Desktop CTA Buttons */}
         <div className="hidden md:flex md:items-center md:gap-2">
           <Button variant="ghost" asChild>
-            <a href={`${APP_URL}/login`}>Log in</a>
+            <a href={ctaLinks.login}>Log in</a>
           </Button>
           <Button asChild>
-            <a href={`${APP_URL}/signup`}>Get Started</a>
+            <a href={ctaLinks.signup}>Get Started</a>
           </Button>
         </div>
 
@@ -240,10 +239,10 @@ export function Header() {
               {/* Mobile CTA Buttons */}
               <div className="mt-4 flex flex-col gap-2">
                 <Button variant="outline" asChild className="w-full">
-                  <a href={`${APP_URL}/login`}>Log in</a>
+                  <a href={ctaLinks.login}>Log in</a>
                 </Button>
                 <Button asChild className="w-full">
-                  <a href={`${APP_URL}/signup`}>Get Started</a>
+                  <a href={ctaLinks.signup}>Get Started</a>
                 </Button>
               </div>
             </div>

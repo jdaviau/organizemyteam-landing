@@ -1,23 +1,25 @@
+import { platformMetrics } from "@/lib/content";
+
 const stats = [
   {
-    value: "$2.5M+",
+    value: platformMetrics.totalAmountManaged,
     label: "Team Finances Tracked",
     description: "Total amount managed through our platform",
   },
   {
-    value: "500+",
+    value: `${platformMetrics.totalTeams}+`,
     label: "Active Teams",
     description: "Youth sports teams using Team Manager",
   },
   {
-    value: "15,000+",
-    label: "Payments Processed",
-    description: "Dues, fees, and fundraising tracked",
+    value: `${(platformMetrics.totalTransactions / 1000).toFixed(0)}K+`,
+    label: "Transactions Recorded",
+    description: "Payments, dues, and expenses tracked",
   },
   {
-    value: "4.8/5",
-    label: "Treasurer Rating",
-    description: "Average satisfaction score",
+    value: `${platformMetrics.satisfactionRate}%`,
+    label: "Satisfaction Rate",
+    description: "Treasurers who recommend Team Manager",
   },
 ];
 

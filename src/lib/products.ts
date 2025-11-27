@@ -28,8 +28,7 @@ export interface Product {
   ctaHref: string;
 }
 
-const APP_URL =
-  process.env.NEXT_PUBLIC_APP_URL || "https://app.organizemyteam.com";
+import { ctaLinks } from "@/lib/constants";
 
 export const products: Record<string, Product> = {
   "team-manager": {
@@ -120,7 +119,7 @@ export const products: Record<string, Product> = {
       },
     ],
     ctaText: "Start Free Trial",
-    ctaHref: `${APP_URL}/signup`,
+    ctaHref: ctaLinks.signup,
   },
 };
 

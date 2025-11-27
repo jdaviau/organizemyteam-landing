@@ -21,7 +21,7 @@ export function UseCasesSection({ useCases }: UseCasesSectionProps) {
         </div>
 
         <div className="mt-16 grid gap-8 md:grid-cols-2">
-          {useCases.map((useCase, index) => (
+          {useCases.map((useCase) => (
             <Card key={useCase.title} className="relative overflow-hidden">
               <div className="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-primary to-primary/50" />
               <CardHeader>

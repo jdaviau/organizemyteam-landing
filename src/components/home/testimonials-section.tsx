@@ -1,44 +1,30 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { QuoteIcon } from "lucide-react";
+import { QuoteIcon, Star } from "lucide-react";
+import { testimonials } from "@/lib/content";
 
-const testimonials = [
-  {
-    quote:
-      "As a soccer mom turned treasurer, I was drowning in spreadsheets. Team Manager saved my sanity—I can finally see who owes what without digging through emails.",
-    author: "Sarah M.",
-    role: "Treasurer, Riverside Youth Soccer",
-    initials: "SM",
-  },
-  {
-    quote:
-      "The automated reminders alone are worth it. I used to dread asking parents for late payments. Now the system does it for me, professionally and on schedule.",
-    author: "Mike T.",
-    role: "Treasurer, Little League Baseball",
-    initials: "MT",
-  },
-  {
-    quote:
-      "Our board meetings are so much smoother now. I pull up the financial report in 30 seconds instead of scrambling to update a spreadsheet the night before.",
-    author: "Jennifer L.",
-    role: "Treasurer, Swim Club",
-    initials: "JL",
-  },
-  {
-    quote:
-      "We switched from TeamSnap because their payment features were too basic. Team Manager gives us the detailed tracking we actually need as treasurers.",
-    author: "David K.",
-    role: "Treasurer, Hockey Association",
-    initials: "DK",
-  },
-  {
-    quote:
-      "Finally, a tool that understands what treasurers actually do. The expense categories and budget tracking are exactly what I needed.",
-    author: "Lisa R.",
-    role: "Treasurer, Basketball League",
-    initials: "LR",
-  },
-];
+function getInitials(name: string): string {
+  return name
+    .split(" ")
+    .map((n) => n[0])
+    .join("")
+    .toUpperCase();
+}
+
+function StarRating({ rating }: { rating: number }) {
+  return (
+    <div className="flex gap-0.5">
+      {[...Array(5)].map((_, i) => (
+        <Star
+          key={i}
+          className={`h-4 w-4 ${
+            i < rating ? "fill-yellow-400 text-yellow-400" : "text-muted"
+          }`}
+        />
+      ))}
+    </div>
+  );
+}
 
 export function TestimonialsSection() {
   return (
@@ -54,25 +40,28 @@ export function TestimonialsSection() {
         </p>
       </div>
 
-      {/* Testimonial Cards */}
+      {/* Testimonial Cards - Top Row */}
       <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {testimonials.slice(0, 3).map((testimonial) => (
-          <Card key={testimonial.author} className="relative">
+          <Card key={testimonial.id} className="relative">
             <CardContent className="pt-6">
-              <QuoteIcon className="h-8 w-8 text-primary/20" />
-              <blockquote className="mt-4 text-muted-foreground">
+              <div className="flex items-center justify-between mb-4">
+                <QuoteIcon className="h-8 w-8 text-primary/20" />
+                <StarRating rating={testimonial.rating} />
+              </div>
+              <blockquote className="text-muted-foreground">
                 &ldquo;{testimonial.quote}&rdquo;
               </blockquote>
               <div className="mt-6 flex items-center gap-3">
                 <Avatar>
                   <AvatarFallback className="bg-primary/10 text-primary">
-                    {testimonial.initials}
+                    {getInitials(testimonial.name)}
                   </AvatarFallback>
                 </Avatar>
                 <div>
-                  <p className="font-semibold text-sm">{testimonial.author}</p>
+                  <p className="font-semibold text-sm">{testimonial.name}</p>
                   <p className="text-sm text-muted-foreground">
-                    {testimonial.role}
+                    {testimonial.role}, {testimonial.team}
                   </p>
                 </div>
               </div>
@@ -83,23 +72,26 @@ export function TestimonialsSection() {
 
       {/* Additional testimonials in a different layout */}
       <div className="mt-8 grid gap-6 md:grid-cols-2">
-        {testimonials.slice(3).map((testimonial) => (
-          <Card key={testimonial.author} className="relative">
+        {testimonials.slice(3, 5).map((testimonial) => (
+          <Card key={testimonial.id} className="relative">
             <CardContent className="pt-6">
-              <QuoteIcon className="h-6 w-6 text-primary/20" />
-              <blockquote className="mt-3 text-sm text-muted-foreground">
+              <div className="flex items-center justify-between mb-3">
+                <QuoteIcon className="h-6 w-6 text-primary/20" />
+                <StarRating rating={testimonial.rating} />
+              </div>
+              <blockquote className="text-sm text-muted-foreground">
                 &ldquo;{testimonial.quote}&rdquo;
               </blockquote>
               <div className="mt-4 flex items-center gap-3">
                 <Avatar className="h-8 w-8">
                   <AvatarFallback className="bg-primary/10 text-primary text-xs">
-                    {testimonial.initials}
+                    {getInitials(testimonial.name)}
                   </AvatarFallback>
                 </Avatar>
                 <div>
-                  <p className="font-semibold text-sm">{testimonial.author}</p>
+                  <p className="font-semibold text-sm">{testimonial.name}</p>
                   <p className="text-xs text-muted-foreground">
-                    {testimonial.role}
+                    {testimonial.role}, {testimonial.team}
                   </p>
                 </div>
               </div>
