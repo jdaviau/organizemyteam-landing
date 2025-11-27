@@ -31,6 +31,29 @@ export interface Product {
 import { ctaLinks } from "@/lib/constants";
 
 export const products: Record<string, Product> = {
+  // Future product placeholders - uncomment when ready to launch
+  // "league-manager": {
+  //   slug: "league-manager",
+  //   name: "League Manager",
+  //   tagline: "Organization-wide financial oversight",
+  //   description: "Coming soon: Manage multiple teams and leagues from a single dashboard.",
+  //   features: [],
+  //   useCases: [],
+  //   screenshots: [],
+  //   ctaText: "Join Waitlist",
+  //   ctaHref: "/contact?subject=league-manager",
+  // },
+  // "tournament-manager": {
+  //   slug: "tournament-manager",
+  //   name: "Tournament Manager",
+  //   tagline: "End-to-end tournament finances",
+  //   description: "Coming soon: Complete financial management for tournament organizers.",
+  //   features: [],
+  //   useCases: [],
+  //   screenshots: [],
+  //   ctaText: "Join Waitlist",
+  //   ctaHref: "/contact?subject=tournament-manager",
+  // },
   "team-manager": {
     slug: "team-manager",
     name: "Team Manager",
@@ -103,17 +126,17 @@ export const products: Record<string, Product> = {
     ],
     screenshots: [
       {
-        src: "/screenshots/dashboard-placeholder.png",
+        src: "/screenshots/dashboard-placeholder.svg",
         alt: "Team Manager Dashboard",
         caption: "Overview dashboard showing team finances at a glance",
       },
       {
-        src: "/screenshots/payments-placeholder.png",
+        src: "/screenshots/payments-placeholder.svg",
         alt: "Payment Tracking View",
         caption: "Track payments and outstanding balances by member",
       },
       {
-        src: "/screenshots/reports-placeholder.png",
+        src: "/screenshots/reports-placeholder.svg",
         alt: "Financial Reports",
         caption: "Generate detailed financial reports in seconds",
       },

@@ -1,0 +1,111 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="675" fill="#f8fafc"/>
+
+  <!-- Sidebar -->
+  <rect width="240" height="675" fill="#1e293b"/>
+  <rect x="20" y="20" width="200" height="40" rx="6" fill="#3b82f6"/>
+  <text x="60" y="47" fill="white" font-family="system-ui" font-size="16" font-weight="600">Team Manager</text>
+
+  <!-- Sidebar menu items -->
+  <rect x="20" y="80" width="200" height="36" rx="6" fill="transparent"/>
+  <text x="40" y="104" fill="#64748b" font-family="system-ui" font-size="14">Dashboard</text>
+  <rect x="20" y="124" width="200" height="36" rx="6" fill="transparent"/>
+  <text x="40" y="148" fill="#64748b" font-family="system-ui" font-size="14">Payments</text>
+  <rect x="20" y="168" width="200" height="36" rx="6" fill="transparent"/>
+  <text x="40" y="192" fill="#64748b" font-family="system-ui" font-size="14">Expenses</text>
+  <rect x="20" y="212" width="200" height="36" rx="6" fill="#334155"/>
+  <text x="40" y="236" fill="#94a3b8" font-family="system-ui" font-size="14">Reports</text>
+
+  <!-- Header -->
+  <rect x="260" y="20" width="920" height="60" rx="8" fill="white" stroke="#e2e8f0"/>
+  <text x="280" y="58" fill="#1e293b" font-family="system-ui" font-size="20" font-weight="600">Financial Reports</text>
+  <rect x="920" y="35" width="120" height="32" rx="6" fill="#10b981"/>
+  <text x="942" y="57" fill="white" font-family="system-ui" font-size="14" font-weight="500">Export PDF</text>
+  <rect x="1050" y="35" width="120" height="32" rx="6" fill="#3b82f6"/>
+  <text x="1070" y="57" fill="white" font-family="system-ui" font-size="14" font-weight="500">Export Excel</text>
+
+  <!-- Report preview -->
+  <rect x="260" y="100" width="920" height="555" rx="8" fill="white" stroke="#e2e8f0"/>
+
+  <!-- Report header -->
+  <rect x="280" y="120" width="880" height="80" fill="#f8fafc" rx="6"/>
+  <text x="300" y="155" fill="#1e293b" font-family="system-ui" font-size="22" font-weight="700">Lightning U12 Soccer</text>
+  <text x="300" y="180" fill="#64748b" font-family="system-ui" font-size="14">Financial Summary Report • Spring 2025 Season</text>
+  <text x="1000" y="155" fill="#64748b" font-family="system-ui" font-size="12">Generated: Jan 16, 2025</text>
+
+  <!-- Summary boxes -->
+  <rect x="300" y="220" width="200" height="80" rx="6" fill="#dcfce7" stroke="#86efac"/>
+  <text x="320" y="250" fill="#16a34a" font-family="system-ui" font-size="12" font-weight="500">TOTAL INCOME</text>
+  <text x="320" y="280" fill="#15803d" font-family="system-ui" font-size="24" font-weight="700">$8,450.00</text>
+
+  <rect x="520" y="220" width="200" height="80" rx="6" fill="#fee2e2" stroke="#fca5a5"/>
+  <text x="540" y="250" fill="#dc2626" font-family="system-ui" font-size="12" font-weight="500">TOTAL EXPENSES</text>
+  <text x="540" y="280" fill="#b91c1c" font-family="system-ui" font-size="24" font-weight="700">$6,890.00</text>
+
+  <rect x="740" y="220" width="200" height="80" rx="6" fill="#dbeafe" stroke="#93c5fd"/>
+  <text x="760" y="250" fill="#2563eb" font-family="system-ui" font-size="12" font-weight="500">NET POSITION</text>
+  <text x="760" y="280" fill="#1d4ed8" font-family="system-ui" font-size="24" font-weight="700">$1,560.00</text>
+
+  <rect x="960" y="220" width="200" height="80" rx="6" fill="#f3e8ff" stroke="#d8b4fe"/>
+  <text x="980" y="250" fill="#9333ea" font-family="system-ui" font-size="12" font-weight="500">COLLECTION RATE</text>
+  <text x="980" y="280" fill="#7e22ce" font-family="system-ui" font-size="24" font-weight="700">94%</text>
+
+  <!-- Income breakdown -->
+  <text x="300" y="340" fill="#1e293b" font-family="system-ui" font-size="16" font-weight="600">Income Breakdown</text>
+  <rect x="300" y="355" width="400" height="30" fill="#f8fafc"/>
+  <text x="310" y="376" fill="#64748b" font-family="system-ui" font-size="11" font-weight="600">CATEGORY</text>
+  <text x="500" y="376" fill="#64748b" font-family="system-ui" font-size="11" font-weight="600">BUDGETED</text>
+  <text x="600" y="376" fill="#64748b" font-family="system-ui" font-size="11" font-weight="600">ACTUAL</text>
+
+  <rect x="300" y="385" width="400" height="30" fill="white" stroke="#f1f5f9"/>
+  <text x="310" y="406" fill="#1e293b" font-family="system-ui" font-size="13">Registration Dues</text>
+  <text x="500" y="406" fill="#64748b" font-family="system-ui" font-size="13">$5,000</text>
+  <text x="600" y="406" fill="#16a34a" font-family="system-ui" font-size="13" font-weight="500">$5,200</text>
+
+  <rect x="300" y="415" width="400" height="30" fill="white" stroke="#f1f5f9"/>
+  <text x="310" y="436" fill="#1e293b" font-family="system-ui" font-size="13">Tournament Fees</text>
+  <text x="500" y="436" fill="#64748b" font-family="system-ui" font-size="13">$2,500</text>
+  <text x="600" y="436" fill="#f59e0b" font-family="system-ui" font-size="13" font-weight="500">$2,400</text>
+
+  <rect x="300" y="445" width="400" height="30" fill="white" stroke="#f1f5f9"/>
+  <text x="310" y="466" fill="#1e293b" font-family="system-ui" font-size="13">Fundraising</text>
+  <text x="500" y="466" fill="#64748b" font-family="system-ui" font-size="13">$1,000</text>
+  <text x="600" y="466" fill="#f59e0b" font-family="system-ui" font-size="13" font-weight="500">$850</text>
+
+  <!-- Expense breakdown -->
+  <text x="740" y="340" fill="#1e293b" font-family="system-ui" font-size="16" font-weight="600">Expense Breakdown</text>
+  <rect x="740" y="355" width="400" height="30" fill="#f8fafc"/>
+  <text x="750" y="376" fill="#64748b" font-family="system-ui" font-size="11" font-weight="600">CATEGORY</text>
+  <text x="940" y="376" fill="#64748b" font-family="system-ui" font-size="11" font-weight="600">BUDGETED</text>
+  <text x="1040" y="376" fill="#64748b" font-family="system-ui" font-size="11" font-weight="600">ACTUAL</text>
+
+  <rect x="740" y="385" width="400" height="30" fill="white" stroke="#f1f5f9"/>
+  <text x="750" y="406" fill="#1e293b" font-family="system-ui" font-size="13">Field Rental</text>
+  <text x="940" y="406" fill="#64748b" font-family="system-ui" font-size="13">$2,000</text>
+  <text x="1040" y="406" fill="#16a34a" font-family="system-ui" font-size="13" font-weight="500">$1,800</text>
+
+  <rect x="740" y="415" width="400" height="30" fill="white" stroke="#f1f5f9"/>
+  <text x="750" y="436" fill="#1e293b" font-family="system-ui" font-size="13">Equipment</text>
+  <text x="940" y="436" fill="#64748b" font-family="system-ui" font-size="13">$1,500</text>
+  <text x="1040" y="436" fill="#dc2626" font-family="system-ui" font-size="13" font-weight="500">$1,650</text>
+
+  <rect x="740" y="445" width="400" height="30" fill="white" stroke="#f1f5f9"/>
+  <text x="750" y="466" fill="#1e293b" font-family="system-ui" font-size="13">League Fees</text>
+  <text x="940" y="466" fill="#64748b" font-family="system-ui" font-size="13">$1,500</text>
+  <text x="1040" y="466" fill="#64748b" font-family="system-ui" font-size="13" font-weight="500">$1,500</text>
+
+  <rect x="740" y="475" width="400" height="30" fill="white" stroke="#f1f5f9"/>
+  <text x="750" y="496" fill="#1e293b" font-family="system-ui" font-size="13">Tournaments</text>
+  <text x="940" y="496" fill="#64748b" font-family="system-ui" font-size="13">$1,500</text>
+  <text x="1040" y="496" fill="#16a34a" font-family="system-ui" font-size="13" font-weight="500">$1,440</text>
+
+  <!-- Outstanding balances -->
+  <text x="300" y="520" fill="#1e293b" font-family="system-ui" font-size="16" font-weight="600">Outstanding Balances</text>
+  <rect x="300" y="535" width="400" height="30" fill="#fef3c7" stroke="#fcd34d" rx="4"/>
+  <text x="310" y="556" fill="#92400e" font-family="system-ui" font-size="13">3 families with outstanding balances totaling $275</text>
+
+  <!-- Chart placeholder -->
+  <rect x="740" y="520" width="400" height="110" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="880" y="580" fill="#94a3b8" font-family="system-ui" font-size="14">Budget vs Actual Chart</text>
+</svg>

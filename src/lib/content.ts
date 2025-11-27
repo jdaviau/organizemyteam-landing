@@ -97,7 +97,7 @@ export interface Screenshot {
 export const dashboardScreenshots: Screenshot[] = [
   {
     id: "screenshot-dashboard",
-    src: "/screenshots/dashboard-overview.png",
+    src: "/screenshots/dashboard-placeholder.svg",
     alt: "Team Manager Dashboard Overview",
     caption:
       "See your team's complete financial picture at a glance—income, expenses, and outstanding balances.",
@@ -105,7 +105,7 @@ export const dashboardScreenshots: Screenshot[] = [
   },
   {
     id: "screenshot-payments",
-    src: "/screenshots/payment-tracking.png",
+    src: "/screenshots/payments-placeholder.svg",
     alt: "Payment Tracking View",
     caption:
       "Track every payment with detailed records. Know exactly who's paid, who owes, and when.",
@@ -113,7 +113,7 @@ export const dashboardScreenshots: Screenshot[] = [
   },
   {
     id: "screenshot-expenses",
-    src: "/screenshots/expense-management.png",
+    src: "/screenshots/dashboard-placeholder.svg",
     alt: "Expense Management",
     caption:
       "Categorize expenses, attach receipts, and track spending against your budget.",
@@ -121,7 +121,7 @@ export const dashboardScreenshots: Screenshot[] = [
   },
   {
     id: "screenshot-reports",
-    src: "/screenshots/financial-reports.png",
+    src: "/screenshots/reports-placeholder.svg",
     alt: "Financial Reports",
     caption:
       "Generate professional reports in seconds. Perfect for board meetings and parent updates.",
