@@ -32,14 +32,14 @@ export function ProductCTA({ productName, ctaText, ctaHref }: ProductCTAProps) {
             <Button
               size="lg"
               variant="outline"
-              className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10"
+              className="border-primary-foreground bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary"
               asChild
             >
               <Link href="/pricing">View Pricing</Link>
             </Button>
           </div>
           <p className="mt-6 text-sm text-primary-foreground/60">
-            14-day free trial • No credit card required • Cancel anytime
+            7-day free trial • No credit card required • Cancel anytime
           </p>
         </div>
       </div>

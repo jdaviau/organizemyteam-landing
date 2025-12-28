@@ -28,6 +28,13 @@ interface FeaturesShowcaseProps {
   features: ProductFeature[];
 }
 
+// Map feature titles to anchor IDs for navigation
+const featureAnchorMap: Record<string, string> = {
+  "Payment Tracking": "payments",
+  "Expense Management": "expenses",
+  "Financial Reports": "reports",
+};
+
 export function FeaturesShowcase({ features }: FeaturesShowcaseProps) {
   return (
     <section id="features" className="container-landing section-padding">
@@ -43,8 +50,13 @@ export function FeaturesShowcase({ features }: FeaturesShowcaseProps) {
       <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {features.map((feature) => {
           const Icon = iconMap[feature.icon] || CreditCardIcon;
+          const anchorId = featureAnchorMap[feature.title];
           return (
-            <Card key={feature.title} className="relative">
+            <Card
+              key={feature.title}
+              id={anchorId}
+              className="relative scroll-mt-20"
+            >
               <CardHeader>
                 <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
                   <Icon className="h-6 w-6 text-primary" />

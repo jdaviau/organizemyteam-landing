@@ -70,7 +70,7 @@ export const products: Record<string, Product> = {
       {
         title: "Expense Management",
         description:
-          "Categorize and track all team expenses—equipment, uniforms, field rentals, tournament fees, and more. Upload receipts, assign categories, and maintain a complete audit trail.",
+          "Categorize and track all team expenses—equipment, uniforms, field rentals, tournament fees, and more. Assign categories and maintain a complete audit trail.",
         icon: "receipt",
       },
       {
