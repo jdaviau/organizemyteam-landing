@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -208,20 +207,12 @@ export default function AboutPage() {
             Join the teams who have already made the switch to easier
             financial management.
           </p>
-          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="mt-8 flex justify-center">
             <Button size="lg" variant="secondary" asChild>
               <a href={ctaLinks.signup}>
                 Start Free Trial
                 <ArrowRight className="ml-2 h-4 w-4" />
               </a>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="bg-transparent border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10"
-              asChild
-            >
-              <Link href="/contact">Contact Us</Link>
             </Button>
           </div>
         </div>
