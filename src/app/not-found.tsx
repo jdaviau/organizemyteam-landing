@@ -65,12 +65,6 @@ export default function NotFound() {
               Pricing
             </Link>
             <Link
-              href="/blog"
-              className="text-muted-foreground hover:text-primary transition-colors"
-            >
-              Blog
-            </Link>
-            <Link
               href="/docs"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
