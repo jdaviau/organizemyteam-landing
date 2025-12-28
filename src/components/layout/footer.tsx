@@ -15,7 +15,7 @@ const footerLinks = {
     title: "Resources",
     links: [
       { title: "Documentation", href: "/docs" },
-      { title: "Getting Started", href: "/docs/getting-started" },
+      { title: "Getting Started", href: "/contact" },
     ],
   },
   company: {
