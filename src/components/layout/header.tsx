@@ -50,11 +50,6 @@ const productLinks = [
 
 const resourceLinks = [
   {
-    title: "Blog",
-    href: "/blog",
-    description: "Tips and guides for team treasurers",
-  },
-  {
     title: "Documentation",
     href: "/docs",
     description: "Get started with Team Manager",
