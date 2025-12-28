@@ -87,7 +87,7 @@ export default function AboutPage() {
         <div className="rounded-2xl bg-primary/5 border border-primary/20 p-8 md:p-12 text-center">
           <h2 className="text-2xl font-bold md:text-3xl">Our Mission</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            To give every youth sports team treasurer the tools they need to
+            To give every youth sports team volunteer the tools they need to
             manage finances with confidence, transparency, and minimal time
             investment—so they can focus on what matters most: supporting their
             team.
@@ -183,7 +183,7 @@ export default function AboutPage() {
 
         <div className="max-w-3xl mx-auto space-y-4">
           {[
-            "Built specifically for youth sports team treasurers",
+            "Built specifically for youth sports team volunteers",
             "Financial management is our focus, not an afterthought",
             "Simple enough for volunteer treasurers, powerful enough for clubs",
             "Transparent pricing with a generous free tier",
