@@ -205,7 +205,7 @@ export default function AboutPage() {
             Ready to Simplify Your Team Finances?
           </h2>
           <p className="mt-4 text-lg text-primary-foreground/80 max-w-2xl mx-auto">
-            Join hundreds of teams who have already made the switch to easier
+            Join the teams who have already made the switch to easier
             financial management.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
