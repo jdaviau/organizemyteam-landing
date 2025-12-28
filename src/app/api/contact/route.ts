@@ -1,4 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 interface ContactFormData {
   name: string;
@@ -28,36 +31,26 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // In production, you would send an email here using a service like:
-    // - Resend (https://resend.com)
-    // - SendGrid
-    // - AWS SES
-    // - Nodemailer
-    //
-    // Example with Resend:
-    // const resend = new Resend(process.env.RESEND_API_KEY);
-    // await resend.emails.send({
-    //   from: 'noreply@organizemyteam.com',
-    //   to: 'support@organizemyteam.com',
-    //   subject: `[Contact Form] ${body.subject}: ${body.name}`,
-    //   html: `
-    //     <h2>New Contact Form Submission</h2>
-    //     <p><strong>Name:</strong> ${body.name}</p>
-    //     <p><strong>Email:</strong> ${body.email}</p>
-    //     <p><strong>Subject:</strong> ${body.subject}</p>
-    //     <p><strong>Message:</strong></p>
-    //     <p>${body.message.replace(/\n/g, '<br>')}</p>
-    //   `,
-    // });
+    // Send email using Resend
+    console.log("Attempting to send email with Resend...");
+    console.log("API Key exists:", !!process.env.RESEND_API_KEY);
 
-    // For now, log the submission (in production, replace with actual email sending)
-    console.log("Contact form submission:", {
-      name: body.name,
-      email: body.email,
-      subject: body.subject,
-      message: body.message,
-      timestamp: new Date().toISOString(),
+    const result = await resend.emails.send({
+      from: process.env.RESEND_FROM_EMAIL || "OrganizeMyTeam <onboarding@resend.dev>",
+      to: process.env.RESEND_TO_EMAIL || "support@organizemyteam.com",
+      replyTo: body.email,
+      subject: `[Contact Form] ${body.subject}: ${body.name}`,
+      html: `
+        <h2>New Contact Form Submission</h2>
+        <p><strong>Name:</strong> ${body.name}</p>
+        <p><strong>Email:</strong> ${body.email}</p>
+        <p><strong>Subject:</strong> ${body.subject}</p>
+        <p><strong>Message:</strong></p>
+        <p>${body.message.replace(/\n/g, "<br>")}</p>
+      `,
     });
+
+    console.log("Email sent successfully:", result);
 
     return NextResponse.json(
       { success: true, message: "Message sent successfully" },
@@ -65,8 +58,12 @@ export async function POST(request: NextRequest) {
     );
   } catch (error) {
     console.error("Contact form error:", error);
+    console.error("Error details:", JSON.stringify(error, null, 2));
     return NextResponse.json(
-      { error: "Failed to process request" },
+      {
+        error: "Failed to process request",
+        details: error instanceof Error ? error.message : "Unknown error"
+      },
       { status: 500 }
     );
   }
