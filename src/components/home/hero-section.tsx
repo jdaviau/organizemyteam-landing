@@ -35,12 +35,9 @@ export function HeroSection() {
           </Button>
         </div>
 
-        {/* Social Proof Teaser */}
+        {/* Value Proposition */}
         <p className="mt-8 text-sm text-muted-foreground">
-          Trusted by <span className="font-semibold text-foreground">500+</span>{" "}
-          youth sports teams managing{" "}
-          <span className="font-semibold text-foreground">$2.5M+</span> in team
-          finances
+          Purpose-built for youth sports team treasurers managing dues, expenses, and financial reporting
         </p>
       </div>
 

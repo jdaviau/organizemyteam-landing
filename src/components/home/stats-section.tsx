@@ -1,25 +1,23 @@
-import { platformMetrics } from "@/lib/content";
-
 const stats = [
   {
-    value: platformMetrics.totalAmountManaged,
-    label: "Team Finances Tracked",
-    description: "Total amount managed through our platform",
+    value: "100%",
+    label: "Financial Focus",
+    description: "Built exclusively for team treasurer needs",
   },
   {
-    value: `${platformMetrics.totalTeams}+`,
-    label: "Active Teams",
-    description: "Youth sports teams using Team Manager",
+    value: "Unlimited",
+    label: "Teams & Members",
+    description: "No limits on Pro plan - manage as many as you need",
   },
   {
-    value: `${(platformMetrics.totalTransactions / 1000).toFixed(0)}K+`,
-    label: "Transactions Recorded",
-    description: "Payments, dues, and expenses tracked",
+    value: "7 Days",
+    label: "Free Trial",
+    description: "No credit card required",
   },
   {
-    value: `${platformMetrics.satisfactionRate}%`,
-    label: "Satisfaction Rate",
-    description: "Treasurers who recommend Team Manager",
+    value: "Core Plan",
+    label: "Available",
+    description: "Full payment tracking for small teams",
   },
 ];
 

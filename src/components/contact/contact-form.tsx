@@ -30,6 +30,7 @@ interface FormErrors {
 }
 
 const subjects = [
+  { value: "getting-started", label: "Getting Started" },
   { value: "general", label: "General Inquiry" },
   { value: "support", label: "Technical Support" },
   { value: "sales", label: "Sales / Pricing" },

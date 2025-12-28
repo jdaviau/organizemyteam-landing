@@ -3,7 +3,6 @@ import {
   HeroSection,
   FeaturesSection,
   ComparisonSection,
-  TestimonialsSection,
   StatsSection,
   PricingPreviewSection,
   CTASection,
@@ -105,7 +104,6 @@ export default function HomePage() {
       <FeaturesSection />
       <BeforeAfterSection />
       <ComparisonSection />
-      <TestimonialsSection />
       <PricingPreviewSection />
       <CTASection />
     </>

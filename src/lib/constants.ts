@@ -52,14 +52,14 @@ export const navLinks = {
   },
 };
 
-// CTA links pointing to the app
+// CTA links - now pointing to contact page until app is ready
 export const ctaLinks = {
-  signup: `${APP_URL}/signup`,
+  signup: `/contact`,
   login: `${APP_URL}/login`,
   demo: `${APP_URL}/demo`,
   dashboard: `${APP_URL}/dashboard`,
   // Signup with source tracking
-  signupWithSource: (source: string) => `${APP_URL}/signup?ref=${source}`,
+  signupWithSource: (source: string) => `/contact?ref=${source}`,
 };
 
 // Cross-subdomain auth configuration

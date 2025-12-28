@@ -16,18 +16,18 @@ import { ctaLinks } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "Simple, transparent pricing for Team Manager. Start free with full payment tracking, upgrade for unlimited teams and advanced features. Compare to TeamSnap and save.",
+    "Simple, transparent pricing for Team Manager. Core plan starts at $9.99 USD/month, Pro at $16.99 USD/month. 7-day free trial available.",
   keywords: [
     "team manager pricing",
     "youth sports software cost",
     "team management pricing",
-    "teamsnap alternative pricing",
     "affordable team software",
+    "sports team treasurer software",
   ],
   openGraph: {
     title: "Pricing - OrganizeMyTeam",
     description:
-      "Start free, upgrade when you need more. Simple pricing for team treasurers.",
+      "Simple pricing for team treasurers. Core plan from $9.99/month, Pro from $16.99/month.",
     type: "website",
     url: "https://organizemyteam.com/pricing",
   },
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Pricing - OrganizeMyTeam",
     description:
-      "Start free, upgrade when you need more. Simple pricing for team treasurers.",
+      "Simple pricing for team treasurers. Core plan from $9.99/month, Pro from $16.99/month.",
   },
   alternates: {
     canonical: "https://organizemyteam.com/pricing",
@@ -44,46 +44,45 @@ export const metadata: Metadata = {
 
 const tiers = [
   {
-    name: "Free",
-    price: "$0",
-    period: "forever",
+    name: "Core",
+    price: "$9.99",
+    priceCAD: "$12.99",
+    period: " USD/month",
     description:
       "Perfect for small teams. Full payment tracking capabilities to get you started.",
     features: [
-      { text: "1 team", included: true },
-      { text: "Up to 20 members", included: true },
+      { text: "20 teams", included: true },
+      { text: "50 members", included: true },
       { text: "Full payment tracking", included: true },
-      { text: "Basic expense tracking", included: true },
-      { text: "Member payment history", included: true },
-      { text: "Email support", included: true },
-      { text: "Advanced financial reports", included: false },
-      { text: "Budget tracking", included: false },
+      { text: "Full expense tracking", included: true },
+      { text: "Treasurer dashboards only", included: true },
+      { text: "Export to CSV", included: true },
+      { text: "Priority support", included: true },
       { text: "Automated reminders", included: false },
     ],
-    cta: "Get Started Free",
+    cta: "Get Started",
     href: ctaLinks.signup,
     highlighted: false,
   },
   {
     name: "Pro",
-    price: "$8",
-    period: "/month",
-    yearlyPrice: "$96/year",
+    price: "$16.99",
+    priceCAD: "$19.99",
+    period: " USD/month",
     description:
       "For serious treasurers. Unlimited teams, advanced reports, and automation.",
     features: [
       { text: "Unlimited teams", included: true },
-      { text: "Unlimited members", included: true },
+      { text: "50 members", included: true },
       { text: "Full payment tracking", included: true },
-      { text: "Advanced expense management", included: true },
-      { text: "Detailed financial reports", included: true },
-      { text: "Budget tracking & forecasting", included: true },
-      { text: "Automated payment reminders", included: true },
-      { text: "Export to Excel/PDF", included: true },
+      { text: "Full expense tracking", included: true },
+      { text: "Treasurer, parent and member dashboards", included: true },
+      { text: "Automated reminders", included: true },
+      { text: "Export to CSV/Excel/PDF", included: true },
       { text: "Priority support", included: true },
     ],
-    cta: "Start 14-Day Free Trial",
-    href: `${ctaLinks.signup}?plan=pro`,
+    cta: "Start 7-Day Free Trial",
+    href: `/contact?subject=pro`,
     highlighted: true,
     badge: "Best Value",
   },
@@ -97,11 +96,7 @@ const tiers = [
       { text: "Everything in Pro", included: true },
       { text: "Multi-organization management", included: true },
       { text: "Custom integrations", included: true },
-      { text: "API access", included: true },
-      { text: "Dedicated account manager", included: true },
       { text: "Custom onboarding", included: true },
-      { text: "SLA guarantee", included: true },
-      { text: "Phone support", included: true },
       { text: "Custom reporting", included: true },
     ],
     cta: "Contact Sales",
@@ -114,12 +109,12 @@ const faqs = [
   {
     question: "Can I try Pro features before committing?",
     answer:
-      "Absolutely! Start a 14-day free trial of Pro with no credit card required. You'll have full access to all Pro features during the trial.",
+      "Absolutely! Start a 7-day free trial of Pro with no credit card required. You'll have full access to all Pro features during the trial.",
   },
   {
     question: "What happens when my trial ends?",
     answer:
-      "You'll be automatically moved to the Free plan—no charge, no data loss. Upgrade to Pro anytime to unlock advanced features again.",
+      "After your trial ends, you can choose to subscribe to continue using Pro features, or switch to the Core plan.",
   },
   {
     question: "Can I switch plans later?",
@@ -127,9 +122,9 @@ const faqs = [
       "Yes! Upgrade or downgrade anytime. When upgrading, you'll get immediate access to new features. When downgrading, you'll keep Pro features until your current billing period ends.",
   },
   {
-    question: "Is there a discount for annual billing?",
+    question: "What currency is pricing in?",
     answer:
-      "Yes! Pay annually for Pro and get 2 months free ($96/year instead of $8/month). That's just $8/month for unlimited teams and all Pro features.",
+      "Prices are shown in USD. CAD pricing is also available: Core is $12.99 CAD/month, and Pro is $19.99 CAD/month.",
   },
   {
     question: "What payment methods do you accept?",
@@ -200,7 +195,7 @@ export default function PricingPage() {
             Simple, Transparent Pricing
           </h1>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-            Start free with full payment tracking. Upgrade when you need
+            Choose the plan that fits your team. Upgrade when you need
             unlimited teams and advanced features. No hidden fees, no surprises.
           </p>
         </div>
@@ -227,12 +222,12 @@ export default function PricingPage() {
                 <div className="mt-4">
                   <span className="text-5xl font-bold">{tier.price}</span>
                   <span className="text-muted-foreground">{tier.period}</span>
+                  {tier.priceCAD && (
+                    <p className="mt-1 text-sm text-muted-foreground">
+                      {tier.priceCAD} CAD/month
+                    </p>
+                  )}
                 </div>
-                {tier.yearlyPrice && (
-                  <p className="mt-1 text-sm text-muted-foreground">
-                    or {tier.yearlyPrice} (2 months free)
-                  </p>
-                )}
               </CardHeader>
               <CardContent className="flex-1">
                 <ul className="space-y-3">
@@ -274,7 +269,7 @@ export default function PricingPage() {
 
         {/* Trial Notice */}
         <p className="mt-8 text-center text-sm text-muted-foreground">
-          All paid plans include a 14-day free trial. No credit card required.
+          Pro plan includes a 7-day free trial. No credit card required.
         </p>
       </section>
 

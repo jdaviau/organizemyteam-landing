@@ -9,42 +9,48 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { CheckIcon } from "lucide-react";
+import { CheckIcon, XIcon } from "lucide-react";
 import { ctaLinks } from "@/lib/constants";
 
 const tiers = [
   {
-    name: "Free",
-    price: "$0",
-    period: "forever",
+    name: "Core",
+    price: "$9.99",
+    priceCAD: "$12.99",
+    period: " USD/month",
     description: "Perfect for small teams getting started",
     features: [
-      "1 team",
-      "Up to 20 members",
-      "Full payment tracking",
-      "Basic expense tracking",
-      "Email support",
+      { text: "20 teams", included: true },
+      { text: "50 members", included: true },
+      { text: "Full payment tracking", included: true },
+      { text: "Full expense tracking", included: true },
+      { text: "Treasurer dashboards only", included: true },
+      { text: "Export to CSV", included: true },
+      { text: "Priority support", included: true },
+      { text: "Automated reminders", included: false },
     ],
-    cta: "Start Free",
+    cta: "Get Started",
     href: ctaLinks.signup,
     highlighted: false,
   },
   {
     name: "Pro",
-    price: "$8",
-    period: "/month",
+    price: "$16.99",
+    priceCAD: "$19.99",
+    period: " USD/month",
     description: "For treasurers who need more power",
     features: [
-      "Unlimited teams",
-      "Unlimited members",
-      "Advanced financial reports",
-      "Budget tracking & forecasting",
-      "Automated reminders",
-      "Export to Excel/PDF",
-      "Priority support",
+      { text: "Unlimited teams", included: true },
+      { text: "50 members", included: true },
+      { text: "Full payment tracking", included: true },
+      { text: "Full expense tracking", included: true },
+      { text: "Treasurer, parent and member dashboards", included: true },
+      { text: "Automated reminders", included: true },
+      { text: "Export to CSV/Excel/PDF", included: true },
+      { text: "Priority support", included: true },
     ],
     cta: "Start Free Trial",
-    href: `${ctaLinks.signup}?plan=pro`,
+    href: `/contact?subject=pro`,
     highlighted: true,
     badge: "Most Popular",
   },
@@ -54,11 +60,11 @@ const tiers = [
     period: "",
     description: "For leagues and large organizations",
     features: [
-      "Everything in Pro",
-      "Multi-team management",
-      "Custom integrations",
-      "Dedicated account manager",
-      "SLA guarantee",
+      { text: "Everything in Pro", included: true },
+      { text: "Multi-team management", included: true },
+      { text: "Custom integrations", included: true },
+      { text: "Custom onboarding", included: true },
+      { text: "Custom reporting", included: true },
     ],
     cta: "Contact Sales",
     href: "/contact?subject=enterprise",
@@ -75,7 +81,7 @@ export function PricingPreviewSection() {
           Simple, Transparent Pricing
         </h2>
         <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-          Start free, upgrade when you need more. No hidden fees, no surprises.
+          Choose the plan that fits your team. No hidden fees, no surprises.
         </p>
       </div>
 
@@ -99,14 +105,25 @@ export function PricingPreviewSection() {
               <div className="mt-4">
                 <span className="text-4xl font-bold">{tier.price}</span>
                 <span className="text-muted-foreground">{tier.period}</span>
+                {tier.priceCAD && (
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    {tier.priceCAD} CAD/month
+                  </p>
+                )}
               </div>
             </CardHeader>
             <CardContent className="flex-1">
               <ul className="space-y-3">
                 {tier.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-2">
-                    <CheckIcon className="h-5 w-5 shrink-0 text-primary" />
-                    <span className="text-sm">{feature}</span>
+                  <li key={feature.text} className="flex items-start gap-2">
+                    {feature.included ? (
+                      <CheckIcon className="h-5 w-5 shrink-0 text-primary" />
+                    ) : (
+                      <XIcon className="h-5 w-5 shrink-0 text-muted-foreground/50" />
+                    )}
+                    <span className={feature.included ? "text-sm" : "text-sm text-muted-foreground/50"}>
+                      {feature.text}
+                    </span>
                   </li>
                 ))}
               </ul>
