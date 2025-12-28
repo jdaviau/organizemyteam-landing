@@ -24,14 +24,14 @@ export function CTASection() {
             <Button
               size="lg"
               variant="outline"
-              className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10"
+              className="border-primary-foreground bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary"
               asChild
             >
               <a href="/contact">Talk to Sales</a>
             </Button>
           </div>
           <p className="mt-6 text-sm text-primary-foreground/60">
-            14-day free trial • No credit card required • Cancel anytime
+            7-day free trial • No credit card required • Cancel anytime
           </p>
         </div>
       </div>

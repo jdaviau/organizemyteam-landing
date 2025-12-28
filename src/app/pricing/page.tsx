@@ -138,17 +138,6 @@ const faqs = [
   },
 ];
 
-const competitorComparison = [
-  { feature: "Monthly price (team plan)", teamManager: "$8", teamSnap: "$12.50" },
-  { feature: "Annual price", teamManager: "$96", teamSnap: "$150" },
-  { feature: "Your savings", teamManager: "36%", teamSnap: "-" },
-  { feature: "Payment tracking", teamManager: "✓ Advanced", teamSnap: "✓ Basic" },
-  { feature: "Expense categorization", teamManager: "✓", teamSnap: "✗" },
-  { feature: "Financial reports", teamManager: "✓ Detailed", teamSnap: "✗" },
-  { feature: "Budget forecasting", teamManager: "✓", teamSnap: "✗" },
-  { feature: "Treasurer dashboard", teamManager: "✓", teamSnap: "✗" },
-];
-
 export default function PricingPage() {
   return (
     <>
@@ -321,64 +310,6 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* TeamSnap Comparison */}
-      <section className="container-landing section-padding">
-        <div className="text-center">
-          <Badge variant="outline" className="mb-4">
-            Compare
-          </Badge>
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Team Manager vs. TeamSnap
-          </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-            Save 36% while getting deeper financial features. TeamSnap is great
-            for scheduling—we&apos;re built for treasurers.
-          </p>
-        </div>
-
-        <div className="mt-12 overflow-hidden rounded-xl border">
-          <table className="w-full">
-            <thead>
-              <tr className="border-b bg-muted/50">
-                <th className="px-6 py-4 text-left font-semibold">Feature</th>
-                <th className="px-6 py-4 text-center font-semibold text-primary">
-                  Team Manager
-                </th>
-                <th className="px-6 py-4 text-center font-semibold">
-                  TeamSnap
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {competitorComparison.map((row, index) => (
-                <tr
-                  key={row.feature}
-                  className={
-                    index !== competitorComparison.length - 1 ? "border-b" : ""
-                  }
-                >
-                  <td className="px-6 py-4 text-sm font-medium">
-                    {row.feature}
-                  </td>
-                  <td className="px-6 py-4 text-center text-sm font-semibold text-primary">
-                    {row.teamManager}
-                  </td>
-                  <td className="px-6 py-4 text-center text-sm text-muted-foreground">
-                    {row.teamSnap}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-
-        <div className="mt-8 text-center">
-          <Button size="lg" asChild>
-            <a href={ctaLinks.signup}>Try Free for 14 Days</a>
-          </Button>
-        </div>
-      </section>
-
       {/* FAQ Section */}
       <section className="bg-muted/30">
         <div className="container-landing section-padding">
@@ -420,7 +351,7 @@ export default function PricingPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10"
+                className="border-primary-foreground bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary"
                 asChild
               >
                 <Link href="/contact">Talk to Sales</Link>
