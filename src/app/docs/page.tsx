@@ -90,18 +90,12 @@ export default function DocsPage() {
         <p className="text-muted-foreground mb-6">
           Can&apos;t find what you&apos;re looking for? We&apos;re here to help.
         </p>
-        <div className="flex flex-wrap justify-center gap-4">
+        <div className="flex justify-center">
           <Link
             href="/contact"
             className="inline-flex items-center px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
           >
             Contact Support
-          </Link>
-          <Link
-            href="/blog"
-            className="inline-flex items-center px-4 py-2 rounded-md border border-input hover:bg-accent transition-colors"
-          >
-            Read Our Blog
           </Link>
         </div>
       </div>
