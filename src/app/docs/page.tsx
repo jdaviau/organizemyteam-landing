@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { getDocNavigation } from "@/lib/docs";
-import { BookOpen, CreditCard, Receipt, BarChart3 } from "lucide-react";
+import { BookOpen, CreditCard, Receipt, BarChart3, Shield } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Documentation",
@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 
 const sectionIcons: Record<string, React.ReactNode> = {
   "getting-started": <BookOpen className="h-6 w-6" />,
+  "administrator-guide": <Shield className="h-6 w-6" />,
   "payment-tracking": <CreditCard className="h-6 w-6" />,
   "expense-management": <Receipt className="h-6 w-6" />,
   "reports": <BarChart3 className="h-6 w-6" />,

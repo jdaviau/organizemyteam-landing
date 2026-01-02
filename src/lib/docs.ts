@@ -50,9 +50,22 @@ export const docsNavigation: DocSection[] = [
     ],
   },
   {
+    title: "Administrator Guide",
+    slug: "administrator-guide",
+    order: 2,
+    items: [
+      {
+        slug: ["administrator-guide", "getting-started"],
+        title: "Getting Started",
+        description: "Set up your organization administrator account and subscription",
+        order: 1,
+      },
+    ],
+  },
+  {
     title: "Payment Tracking",
     slug: "payment-tracking",
-    order: 2,
+    order: 3,
     items: [
       {
         slug: ["payment-tracking", "overview"],
@@ -77,7 +90,7 @@ export const docsNavigation: DocSection[] = [
   {
     title: "Expense Management",
     slug: "expense-management",
-    order: 3,
+    order: 4,
     items: [
       {
         slug: ["expense-management", "tracking-expenses"],
@@ -96,7 +109,7 @@ export const docsNavigation: DocSection[] = [
   {
     title: "Reports",
     slug: "reports",
-    order: 4,
+    order: 5,
     items: [
       {
         slug: ["reports", "financial-reports"],
